@@ -33,7 +33,7 @@ const server = new ApolloServer({
 });
 
 const { url } = await startStandaloneServer(server, {
-  context: async () => ({ restaurantCollection}), listen: {port : 6001}
+  context: async () => ({ restaurantCollection}), 
     
 });
 
