@@ -5,10 +5,10 @@ import { schema } from "./schema.ts";
 import { resolvers } from "./resolvers.ts";
 import {restaurantModel} from "./types.ts"; // testModel
 
-//const MONGO_URL = "mongodb+srv://jero:password.@cluster0.u7aqpfe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-//const API_KEY = "OM5JKKx8hBVW2MdbRefj1A==yLbGfkLL4rZtWDaQ";
-const MONGO_URL = Deno.env.get("MONGO_URL");
-const API_KEY = Deno.env.get("API_KEY");
+const MONGO_URL = "mongodb+srv://jero:password.@cluster0.u7aqpfe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const API_KEY = "OM5JKKx8hBVW2MdbRefj1A==yLbGfkLL4rZtWDaQ";
+//const MONGO_URL = Deno.env.get("MONGO_URL");
+//const API_KEY = Deno.env.get("API_KEY");
 
 if (!MONGO_URL) {
   throw new Error("Please provide a MONGO_URL");
