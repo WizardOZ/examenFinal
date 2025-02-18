@@ -5,7 +5,7 @@ import { GraphQLError} from "graphql"
 type Context = {
   restaurantCollection: Collection<restaurantModel>;
 }
-
+const API_KEY = "OM5JKKx8hBVW2MdbRefj1A==yLbGfkLL4rZtWDaQ";
 export const resolvers = {
   Restaurant: {
       id: (parent: restaurantModel) => parent._id!.toString(),
