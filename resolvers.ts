@@ -10,7 +10,7 @@ export const resolvers = {
   Restaurant: {
       id: (parent: restaurantModel) => parent._id!.toString(),
       hora: async (parent: restaurantModel): Promise<string> => {
-          const API_KEY = Deno.env.get("API_KEY");
+          //const API_KEY = Deno.env.get("API_KEY");
           if (!API_KEY) throw new Error("No API key provided")
           const url = "https://api.api-ninjas.com/v1/worldtime?city=" + parent.ciudad
           const data = await fetch(url, {
@@ -24,7 +24,7 @@ export const resolvers = {
 
       },
       temperatura: async (parent: restaurantModel): Promise<string> => {
-        const API_KEY = Deno.env.get("API_KEY");
+        //const API_KEY = Deno.env.get("API_KEY");
         if (!API_KEY) throw new Error("No API key provided")
         const url = "https://api.api-ninjas.com/v1/weather?city=" + parent.ciudad
         const data = await fetch(url, {
@@ -55,7 +55,7 @@ export const resolvers = {
       if (userExists) throw new GraphQLError("Ya hay un usuario registrado con ese teléfono")
         console.log("Restaurante validacion 1")
       //Verificamos que sea correcto el numero de telefono
-      const API_KEY = Deno.env.get("API_KEY");
+      //const API_KEY = Deno.env.get("API_KEY");
         if (!API_KEY) throw new Error("No API key provided")
         const url = "https://api.api-ninjas.com/v1/validatephone?number=" + args.telefono
         const data = await fetch(url, {
